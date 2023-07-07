@@ -1,2 +1,2 @@
 # Minesweeper
-An advanced Minesweeper game in Angular,
+An advanced Minesweeper game in Angular
