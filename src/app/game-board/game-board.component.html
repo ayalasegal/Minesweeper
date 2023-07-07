@@ -1,0 +1,22 @@
+<div class="board">
+  <div *ngFor="let row of board; let rowIndex = index" class="row">
+    <div
+      *ngFor="let cell of row; let colIndex = index"
+      class="cell"
+      (click)="revealCell(cell)"
+      (contextmenu)="toggleFlag($event, cell)"
+      [ngClass]="{
+        'revealed': cell.revealed,
+        'flagged': cell.flagged,
+        'mine': cell.revealed && cell.hasMine
+      }"
+    >
+      <span *ngIf="cell.revealed && !cell.hasMine && cell.neighborMines > 0" [ngClass]="cell.colorClass">
+        {{ cell.neighborMines }}
+      </span>
+      <span *ngIf="cell.revealed && cell.hasMine" class="mine-icon">&#x2620;</span>
+      <span *ngIf="!cell.revealed && cell.flagged"
+         class="flag-icon">&#x2691;</span>
+    </div>
+  </div>
+</div>

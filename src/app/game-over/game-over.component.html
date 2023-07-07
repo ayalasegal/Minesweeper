@@ -1,0 +1,6 @@
+<div class="game-over">
+    <h2 *ngIf="gameService.gameOver">Game Over!</h2>
+    <h2 *ngIf="gameService.gameWon">You Won!</h2>
+    <button (click)="restartGame()">Restart Game</button>
+  </div>
+  

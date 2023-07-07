@@ -1,0 +1,59 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  width: 320px; /* Adjust the width as needed */
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.revealed {
+  background-color: #fff;
+}
+.flag-icon {
+  color: grey;
+}
+
+.mine-icon {
+  color: red;
+  font-family: Segoe UI;
+}
+
+.mine {
+  background-color: rgb(61, 13, 13);
+  color: white;
+}
+
+.flagged {
+  background-color: #aaa;
+}
+.number-1 {
+  color: blue;
+}
+
+.number-2 {
+  color: green;
+}
+
+.number-3 {
+  color: red;
+}
